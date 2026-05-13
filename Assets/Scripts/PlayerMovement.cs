@@ -23,11 +23,11 @@ public class PlayerMovement : MonoBehaviour
         // Flip karakter (hadap kiri/kanan)
         if (move > 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         }
         else if (move < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
         }
 
         // Lompat

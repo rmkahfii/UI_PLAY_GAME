@@ -2,23 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class EnemySpawner : MonoBehaviour
 {
-  public GameObject enemyPrefab;
-    public float spawnTime = 3f;
+    public GameObject enemyPrefab;
 
     void Start()
     {
-        InvokeRepeating("SpawnEnemy", 1f, spawnTime);
+        SpawnEnemy();
     }
 
     void SpawnEnemy()
     {
-        Vector2 spawnPos = new Vector2(
-            Random.Range(-5f, 5f),
-            transform.position.y
-        );
-
-        Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        Instantiate(enemyPrefab, transform.position, Quaternion.identity);
     }
 }
